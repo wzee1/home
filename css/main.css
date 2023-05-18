@@ -173,6 +173,7 @@ header.nav-desktop {
   border: none;
   background-color: #444753;
   color: white;
+  width: 80%;
 }
 
 .input-image {
@@ -468,10 +469,10 @@ section.hero .hero-text .hero-header::before {
   position: absolute;
   background-image: url("../assets/hero/header_dots.svg");
   background-repeat: no-repeat;
-  width: 100%;
+  width: 30%;
   height: 100%;
   top: 5%;
-  left: -30%;
+  left: -8rem;
 }
 section.hero .hero-text .hero-search .hero-search--field {
   margin-top: -1rem;
@@ -600,6 +601,7 @@ section.searching .searching-right .searching-testimonial .searching-testimonial
 section.partners {
   background-color: #282A33;
   padding-block: 0.5rem;
+  overflow-x: hidden;
   position: relative;
 }
 section.partners .partners-header {
@@ -660,6 +662,7 @@ section.contact .contact-right {
   margin-inline: -2rem !important;
   padding: 2rem !important;
   background-color: #2B2E38;
+  overflow: hidden;
   position: relative;
 }
 section.contact .contact-right .contact-header {
@@ -709,13 +712,93 @@ section.footer ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 1rem;
 }
 section.footer ul li {
   display: flex;
   gap: 0.5rem;
 }
 
+@media screen and (max-width: 320px) {
+  :root {
+    --font-size-h1: 1.75rem;
+    --font-size-h2: 1.5rem;
+    --font-size-h3: 1.25rem;
+    --font-size-h4: 1rem;
+    --font-size-p: .8rem;
+  }
+  .nav-logo-mobile img {
+    width: 80%;
+  }
+  .input-text {
+    width: 75.9%;
+    font-size: 0.6rem;
+  }
+  .input-image {
+    padding: 0.6rem;
+    transform: translate(-2.5rem, 1rem);
+  }
+  section.hero {
+    margin-top: 8rem;
+  }
+  section.hero .hero-text .hero-header::before {
+    left: -58%;
+  }
+  section.hero .hero-text .hero-header .hero-header--main span::before {
+    margin-top: 1.75rem;
+  }
+  section.hero .hero-achievements {
+    text-align: center;
+    gap: 0.3rem !important;
+  }
+  section.hero .hero-achievements .hero-achievement .hero-achievement--counter {
+    font-size: 1rem !important;
+  }
+  section.hero .hero-achievements .hero-achievement .hero-achievement--info {
+    font-size: 0.9rem !important;
+  }
+  section.hero .hero-achievements .hero-achievements--divider {
+    display: none;
+  }
+  section.searching .searching-left .searching-search .searching-search--dropdowns {
+    flex-direction: column;
+  }
+  section.searching .searching-right .searching-testimonial {
+    padding: 1rem;
+    text-align: center;
+  }
+  section.searching .searching-right .searching-testimonial .searching-testimonial--header {
+    text-align: left;
+    flex-direction: column;
+  }
+  section.searching .searching-right .searching-testimonial .searching-testimonial--header img {
+    margin-inline: auto;
+  }
+  section.searching .searching-right .searching-testimonial .searching-testimonial--header h4 {
+    justify-content: space-between;
+  }
+  section.partners .partners-companies {
+    grid-template-columns: 1fr;
+  }
+  section.contact .contact-left form {
+    margin-inline: auto;
+  }
+  section.contact .contact-left form .form-name--first,
+  section.contact .contact-left form .form-name--sur,
+  section.contact .contact-left form .form-email,
+  section.contact .contact-left form .form-mobile,
+  section.contact .contact-left form .form-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  section.contact .contact-left form .form-submit .input-image {
+    height: 2.25rem;
+    transform: translate(3.9rem, -2.25rem);
+  }
+}
 @media screen and (min-width: 850px) {
   header.nav-mobile {
     display: none;

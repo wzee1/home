@@ -177,6 +177,7 @@ header.nav-desktop {
    border: none;
    background-color: #444753;
    color: white;
+   width: 80%;
 }
 
 .input-image {
@@ -491,7 +492,7 @@ section.hero {
                transition: color .3s;
 
                &:hover {
-                  color: var(   --color-primary-light);
+                  color: var(--color-primary-light);
                }
 
                &::before {
@@ -513,10 +514,10 @@ section.hero {
             background-image: url("../assets/hero/header_dots.svg");
             background-repeat: no-repeat;
 
-            width: 100%;
+            width: 30%;
             height: 100%;
             top: 5%;
-            left: -30%;
+            left: -8rem;
          }
       }
 
@@ -714,6 +715,7 @@ section.partners {
       }
    }
 
+   overflow-x: hidden;
    position: relative;
    img[alt="Decoration"] {
       position: absolute;
@@ -820,6 +822,7 @@ section.contact {
          }
       }
 
+      overflow: hidden;
       position: relative;
       .contact-right--bg {
          position: absolute;
@@ -846,7 +849,8 @@ section.footer {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 2rem;
+      flex-direction: column;
+      gap: 1rem;
 
       li {
          display: flex;
@@ -862,6 +866,122 @@ section.footer {
 // -------------
 // -------------
 
+@media screen and (max-width: 320px) { // Galaxy Fold
+   :root {
+      --font-size-h1: 1.75rem;
+      --font-size-h2: 1.5rem;
+      --font-size-h3: 1.25rem;
+      --font-size-h4: 1rem;
+      --font-size-p: .8rem;
+   }
+
+   .nav-logo-mobile img {
+      width: 80%;
+   }
+
+   .input-text {
+      width: 75.9%;
+      font-size: .6rem;
+   }
+
+   .input-image {
+      padding: .6rem;
+      transform: translate(-2.5rem, 1rem);
+   }
+
+   section.hero {
+      margin-top: 8rem;
+
+      .hero-text {
+         .hero-header {
+            &::before {
+               left: -58%;
+            }
+
+            .hero-header--main {
+               span::before {
+                  margin-top: 1.75rem;
+               }
+            }
+         }
+      }
+
+
+      .hero-achievements {
+         text-align: center;
+         gap: .3rem !important;
+         .hero-achievement {
+            .hero-achievement--counter {
+               font-size: 1rem !important;
+            }
+
+            .hero-achievement--info {
+               font-size: .9rem !important;
+            }
+         }
+
+         .hero-achievements--divider { display: none; }
+      }
+   }
+
+   section.searching {
+      .searching-left {
+         .searching-search {
+            .searching-search--dropdowns {
+               flex-direction: column;
+            }
+         }
+      }  
+   
+      .searching-right {
+         .searching-testimonial {
+            padding: 1rem;
+            text-align: center;
+
+            .searching-testimonial--header {
+               img { margin-inline: auto; }
+
+               text-align: left;
+               flex-direction: column;
+               h4 {
+                  justify-content: space-between;
+               }
+            }
+         }
+      }
+   }
+
+   section.partners {
+      .partners-companies { grid-template-columns: 1fr; }
+   }
+
+   section.contact {
+      .contact-left {
+         form {
+            margin-inline: auto;
+
+            .form-name--first,
+            .form-name--sur,
+            .form-email,
+            .form-mobile,
+            .form-submit {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               flex-direction: column;
+            }
+
+            .form-submit {
+               .input-image {
+                  height: 2.25rem;
+                  transform: translate(3.9rem, -2.25rem);
+               }
+            }
+         }
+      }
+   }
+}
+
 @media screen and (min-width: 850px) { // Desktop
    header.nav-mobile {
       display: none;
@@ -870,10 +990,6 @@ section.footer {
    header.nav-desktop {
       display: flex; 
    }
-}
-
-@media screen and (max-width: 320px) { // Galaxy Fold
-   
 }
 
 @media screen and (min-width: 1024px) { // Desktop
