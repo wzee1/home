@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./css/main.css" />
+      <link
+         href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+         rel="stylesheet"
+      />
+      <script src="https://unpkg.com/scrollreveal"></script>
+      <title>Document</title>
+   </head>
+   <body>
+      <a class="nav-logo-mobile" href="#"
+         ><img src="./assets/nav/logo.svg" alt="Logo"
+      /></a>
+      <header class="nav-mobile">
+         <input
+            id="page-nav-toggle"
+            class="main-navigation-toggle"
+            type="checkbox"
+         />
+         <label for="page-nav-toggle">
+            <svg class="icon--menu-toggle" viewBox="0 0 60 30">
+               <g class="icon-group">
+                  <g class="icon--menu">
+                     <path d="M 6 0 L 54 0" />
+                     <path d="M 6 15 L 54 15" />
+                     <path d="M 6 30 L 54 30" />
+                  </g>
+                  <g class="icon--close">
+                     <path d="M 15 0 L 45 30" />
+                     <path d="M 15 30 L 45 0" />
+                  </g>
+               </g>
+            </svg>
+         </label>
+
+         <nav class="main-navigation">
+            <a class="nav-logo-mobile" id="open-phased" href="#">
+               <img src="./assets/nav/logo.svg" alt="Logo" />
+            </a>
+
+            <ul>
+               <li class="nav-links"><a href="#search">Properties</a></li>
+               <li class="nav-links"><a href="#contact">Contact</a></li>
+               <li class="nav-links">
+                  <a href="#" class="button primary-button">
+                     Login
+                  </a>
+               </li>
+            </ul>
+         </nav>
+      </header>
+
+      <header class="nav-desktop">
+         <a class="nav-logo" id="open-phased" href="#">
+            <img src="./assets/nav/logo.svg" alt="Logo" />
+         </a>
+
+         <ul>
+            <li class="nav-links"><a href="#search">Properties</a></li>
+            <li class="nav-links"><a href="#contact">Contact</a></li>
+         </ul>
+
+         <a href="#" class="button primary-button">
+            <img src="./assets/nav/login.svg" alt=""> <p>Login</p>
+         </a>
+      </header>
+
+      <section class="hero container">
+         <div class="hero-text">
+            <div class="hero-header">
+               <p class="hero-header--sub">We are on offer right here</p>
+               <h1 class="hero-header--main">
+                  Want a property?<br />
+                  We are here to get you<br />the
+                  <span>Best Price</span>
+                  possible!
+               </h1>
+            </div>
+
+            <div class="hero-search">
+               <p class="hero-search--sub">Find a great property</p>
+               <form class="hero-search--field" action="">
+                  <input type="text" class="input-text" placeholder="Ig: Mumbai" required />
+                  <input type="image" class="input-image" src="./assets/hero/search.svg" />
+               </form>
+            </div>
+
+            <div class="hero-achievements">
+               <div class="hero-achievement">
+                  <h3 class="hero-achievement--counter">353+</h3>
+                  <p class="hero-achievement--info">Properties Sold</p>
+               </div>
+
+               <div class="hero-achievements--divider"></div>
+
+               <div class="hero-achievement">
+                  <h3 class="hero-achievement--counter">900+</h3>
+                  <p class="hero-achievement--info">Listing Available</p>
+               </div>
+
+               <div class="hero-achievements--divider"></div>
+
+               <div class="hero-achievement">
+                  <h3 class="hero-achievement--counter">98%</h3>
+                  <p class="hero-achievement--info">Success Rate</p>
+               </div>
+            </div>
+         </div>
+
+         <img src="./assets/hero/hero_image.png" alt="" class="hero-image" />
+      </section>
+
+      <section class="services">
+         <div class="container">
+            <div class="services-items">
+               <div class="services-item">
+                  <embed
+                     src="./assets/services/location.svg"
+                     class="services-item--img"
+                  />
+
+                  <h2 class="services-item--header">Location</h2>
+
+                  <p class="services-item--info">
+                     The houses are available at the best/safest location of
+                     city in the city of your choice.
+                  </p>
+               </div>
+
+               <div class="services-item">
+                  <embed
+                     src="./assets/services/services.svg"
+                     class="services-item--img"
+                  />
+
+                  <h2 class="services-item--header">Services</h2>
+
+                  <p class="services-item--info">
+                     We have all the services available at any, including 24/7
+                     electricity, water, emergency services etc..
+                  </p>
+               </div>
+
+               <div class="services-item">
+                  <embed
+                     src="./assets/services/finance.svg"
+                     class="services-item--img"
+                  />
+
+                  <h2 class="services-item--header">Finance</h2>
+
+                  <p class="services-item--info">
+                     We have more than 1000+ financing vedors, so don’t be
+                     stressed about that. It will take 2-3 days only..
+                  </p>
+               </div>
+            </div>
+
+            <img src="./assets/services/line.svg" class="services-line"></img>
+         </div>
+      </section>
+
+      <section class="searching container" id="search">
+         <div class="searching-left">
+            <h2 class="searching-header">Search Properties Near You.</h2>
+
+            <form class="searching-search" action="">
+               <div class="searching-search--dropdowns">
+                  <select id="city" name="city" required>
+                     <option value="newyork">New York</option>
+                     <option value="losangeles">Los Angeles</option>
+                     <option value="miami">Miami</option>
+                     <option value="chicago">Chicago</option>
+                  </select>
+
+                  <select id="area" name="area" required>
+                     <option value="all">All</option>
+                     <option value="urban">Urban</option>
+                     <option value="suburban">Suburban</option>
+                     <option value="rular">Rular</option>
+                  </select>
+               </div>
+
+               <input type="text" class="input-text" placeholder="Search for properties" required>
+               <input type="image" class="input-image" src="./assets/hero/search.svg" alt="">
+            </form>
+         </div>
+
+         <div class="searching-right">
+            <div class="searching-testimonial">
+               <div class="searching-testimonial--header">
+                  <img
+                     src="./assets/searching/icon.png"
+                     alt="Pic of Arnes Clinton"
+                  />
+
+                  <div class="searching-testimonial--header--text">
+                     <h4>Arnes Clinton <img src="./assets/searching/verify.svg" alt="Verified" /></h4>
+                     <p>33 Days Ago | Verified</p>
+                  </div>
+               </div>
+
+               <p class="searching-testimonial--info">
+                  We bought house from this website, they have the best quality
+                  of instructor and home you can find. Their financing partners
+                  are very disciplined, you can get the the best interest rates
+                  and it’s easy to get a loan. It’s a hussle free process.
+               </p>
+            </div>
+         </div>
+      </section>
+
+      <section class="partners">
+         <div class="container">
+            <h1 class="partners-header">Our Partners</h1>
+
+            <div class="partners-companies">
+               <img src="./assets/partners/gander.png" alt="Gander Outdoors" />
+               <img
+                  src="./assets/partners/alpine.png"
+                  alt="Alpine Pacific Touring Route"
+               />
+               <img src="./assets/partners/duvenec.png" alt="Duveneck Square" />
+               <img src="./assets/partners/café.png" alt="Café Lazare" />
+            </div>
+
+            <img src="./assets/partners/background.svg" alt="Decoration">
+         </div>
+      </section>
+
+      <section class="contact container" id="contact">
+         <div class="contact-left">
+            <h2 class="contact-header">Get In Touch</h2>
+            <form action="">
+               <div class="form-name">
+                  <div class="form-name--first">
+                     <label for="first-name">First Name</label>
+                     <input type="text" id="first-name" placeholder="John" class="input-text"
+                     required/>
+                  </div>
+                  
+                  <div class="form-name--sur">
+                     <label for="surname">Surname</label>
+                     <input type="text" id="surname" placeholder="Smith" class="input-text"
+                     required/>
+                  </div>
+               </div>
+               
+               <div class="form-email">
+                  <label for="email">Email</label>
+                  <input
+                     type="text"
+                     class="input-text"
+                     id="email"
+                     placeholder="johnsmith@gmail.com"
+                     required
+                  />
+               </div>
+
+               <div class="form-mobile">
+                  <label for="mobile">Mobile Number</label>
+                  <input type="text" class="input-text" id="mobile" placeholder="+36 30 123 4567" 
+                  required/>
+               </div>
+
+               <div class="form-submit">
+                  <p class="input-text">Request Call</p>
+                  <input type="image" class="input-image" src="./assets/contact/call.svg" alt="">
+               </div>
+            </form>
+         </div>
+
+         <div class="contact-right">
+            <h2 class="contact-header">Contact</h2>
+            <p class="contact-info">
+               Get in touch with our experts regarding any query.
+            </p>
+
+            <ul>
+               <li><img src="./assets/contact/phone.svg" />+36 30 123 4567</li>
+               <li><img src="./assets/contact/email.svg" />contact@home.com</li>
+               <li>
+                  <img src="./assets/contact/location.svg" />Floor N2, Phonix
+                  Market City Kamani<br />Kurla West Mumbai Maharastra<br />-400070
+               </li>
+            </ul>
+
+            <img src="./assets/contact/arrow_up.svg" alt="Decoration" class="contact-right--arrow">
+
+            <img src="./assets/contact/bg_dots.svg" alt="Decoration" class="contact-right--bg">
+         </div>
+      </section>
+
+      <section class="footer container">
+         <p>© Home 2023. All Right Reserved</p>
+         <ul>
+            <li>
+               <img
+                  src="./assets/footer/facebook.svg"
+                  alt="Facebook"
+               />
+               <a href="https://www.facebook.com/" style="font-weight: 300;">/realHome</a>
+            </li>
+            <li>
+               <img
+                  src="./assets/footer/instagram.svg"
+                  alt="Instagram"
+               />
+               <a href="https://www.instagram.com/" style="font-weight: 300;">@realHome</a>
+            </li>
+            <li>
+               <img src="./assets/footer/youtube.svg" alt="YouTube" />
+               <a href="https://www.youtube.com/" style="font-weight: 300;">/realHome</a>
+            </li>
+         </ul>
+      </section>
+
+      <script src="./js/main.js"></script>
+   </body>
+</html>
